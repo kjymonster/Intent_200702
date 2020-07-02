@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:text = "변경할 닉네임"
         android:textSize="17sp"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:singleLine="true"/>
 
     <EditText
         android:id="@+id/nickNameEdt"

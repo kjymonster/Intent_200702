@@ -47,6 +47,7 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:text="입력한 닉네임"
+
         android:layout_marginTop="15dp" />
 
     <Button

@@ -7,6 +7,11 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    //닉네임 변경 요청 고유값을 멤버변수로 생성.
+
+    val REQ_FOR_NiCKName = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -54,12 +59,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //결과를 가지고 돌아올때 실행되는 함수.
+    //결과를 가지고 돌아올때 실행되는 함수.  (onactire -> 자동완성 선택)
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
         //어떤 결과를 가지러 다녀온건지 확인. => 닉네임 받으러 간건지.
-        if(requestCode == 1000) {
+       // if(requestCode == 1000)  숫자를 직접 넣으면 가독성이 매우 떨어짐
+        if(requestCode == REQ_FOR_NiCKName){   //가독성을 위해 1000을 REQ_FOR_NICKNAME 멤버변수로 대입해버림.
             //완료로 돌아온게 맞는지도 확인 (resultCode (RESULT_OK))
             if(resultCode == Activity.RESULT_OK){
                 //첨부해준 닉네임을 저장 (data + '?')
