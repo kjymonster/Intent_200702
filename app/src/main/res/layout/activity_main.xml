@@ -49,6 +49,7 @@
         android:layout_marginTop="15dp" />
 
     <Button
+        android:id="@+id/changeNickNameBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="닉네임 변경하러 가기" />
