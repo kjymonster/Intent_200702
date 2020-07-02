@@ -10,6 +10,8 @@ class FirstActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first)
 
+
+
         backToMainBtn.setOnClickListener {
 
             //메인화면으로 복귀
