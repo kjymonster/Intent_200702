@@ -15,11 +15,17 @@ class MainActivity : AppCompatActivity() {
 
             val inputMessage = messageEdt.text.toString()
 
+
+            //입력한 고유번호 Int로 받기
+            val inputNum = numberEdt.text.toString().toInt()
+
             //비행기 티켓 발권
             val myIntent = Intent(this, SecondActivity::class.java)
 
             //티켓정보를 이용해 수하물 첨부
             myIntent.putExtra("message", inputMessage)
+            //추가로 정수를 첨부 (2nd step)
+            myIntent.putExtra("number", inputNum)
 
             //탑승 / 출발
             startActivity(myIntent)

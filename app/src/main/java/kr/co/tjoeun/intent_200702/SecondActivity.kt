@@ -17,5 +17,7 @@ class SecondActivity : AppCompatActivity() {
 
         //저장한 데이터를 텍스트뷰에 반영
         receivedMessageTxt.text = receivedMessage
+
+
     }
 }
